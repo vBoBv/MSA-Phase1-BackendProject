@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StudentSIMS</name>
+    </assembly>
+    <members>
+        <member name="M:StudentSIMS.Controllers.StudentsController.GetStudents">
+            <summary>
+            Get list of students
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StudentSIMS.Controllers.StudentsController.GetStudent(System.Int32)">
+            <summary>
+            Get individual student
+            </summary>
+            <param name="studentId">The id of the student</param>
+            <returns></returns>
+        </member>
+        <member name="M:StudentSIMS.Controllers.StudentsController.CreateStudent(StudentSIMS.Models.Dtos.StudentDto)">
+            <summary>
+            Add a new student
+            </summary>
+            <param name="studentDto">The properties of a student</param>
+            <returns></returns>
+        </member>
+        <member name="M:StudentSIMS.Controllers.StudentsController.UpdateStudent(System.Int32,StudentSIMS.Models.Dtos.StudentDto)">
+            <summary>
+            Update a student
+            </summary>
+            <param name="studentId">The id of the student to be updated</param>
+            <param name="studentDto">The property of the student to be updated</param>
+            <returns></returns>
+        </member>
+        <member name="M:StudentSIMS.Controllers.StudentsController.DeleteStudent(System.Int32)">
+            <summary>
+            Delete a student
+            </summary>
+            <param name="studentId">The id of the student to be deleted</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
