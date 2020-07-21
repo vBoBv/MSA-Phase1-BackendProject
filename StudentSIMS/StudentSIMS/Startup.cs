@@ -37,6 +37,7 @@ namespace StudentSIMS
             var connection = Configuration.GetConnectionString("schoolSIMSConnection");
             services.AddDbContext<StudentContext>(options => options.UseSqlServer(connection));
             services.AddScoped<IStudentRepository, StudentRepository>();
+            services.AddScoped<IAddressRepository, AddressRepository>();
             services.AddAutoMapper(typeof(StudentSIMSMappings));
             services.AddSwaggerGen(c =>
             {

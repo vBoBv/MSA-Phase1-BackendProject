@@ -4,6 +4,41 @@
         <name>StudentSIMS</name>
     </assembly>
     <members>
+        <member name="M:StudentSIMS.Controllers.AddressesController.GetAddresses">
+            <summary>
+            Get list of addresses
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StudentSIMS.Controllers.AddressesController.GetAddress(System.Int32)">
+            <summary>
+            Get individual address
+            </summary>
+            <param name="addressId">The id of the address</param>
+            <returns></returns>
+        </member>
+        <member name="M:StudentSIMS.Controllers.AddressesController.CreateAddress(StudentSIMS.Models.Dtos.AddressCreateDto)">
+            <summary>
+            Add a new address
+            </summary>
+            <param name="addressDto">The properties of an address</param>
+            <returns></returns>
+        </member>
+        <member name="M:StudentSIMS.Controllers.AddressesController.UpdateAddress(System.Int32,StudentSIMS.Models.Dtos.AddressUpdateDto)">
+            <summary>
+            Update an address
+            </summary>
+            <param name="addressId">The id of the address to be updated</param>
+            <param name="addressDto">The property of the address to be updated</param>
+            <returns></returns>
+        </member>
+        <member name="M:StudentSIMS.Controllers.AddressesController.DeleteAddress(System.Int32)">
+            <summary>
+            Delete an address
+            </summary>
+            <param name="addressId">The id of the address to be deleted</param>
+            <returns></returns>
+        </member>
         <member name="M:StudentSIMS.Controllers.StudentsController.GetStudents">
             <summary>
             Get list of students

@@ -50,7 +50,7 @@ namespace StudentSIMS.Controllers
         /// <param name="studentId">The id of the student</param>
         /// <returns></returns>
         [HttpGet("{studentId:int}", Name = "GetStudent")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<StudentDto>))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(StudentDto))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
         public IActionResult GetStudent(int studentId)
