@@ -19,6 +19,7 @@ namespace StudentSIMS.Repository
 
         public bool CreateStudent(Student student)
         {
+            student.timeCreated = DateTime.Now;
             _db.Student.Add(student);
             return Save();
         }

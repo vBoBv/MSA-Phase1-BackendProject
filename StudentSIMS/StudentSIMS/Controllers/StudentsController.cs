@@ -122,6 +122,7 @@ namespace StudentSIMS.Controllers
             }
 
             var studentObj = _mapper.Map<Student>(studentDto);
+            
             if (!_studentRepo.UpdateStudent(studentObj))
             {
                 ModelState.AddModelError("", $"Something went wrong when updating the record {studentObj.firstName}");
