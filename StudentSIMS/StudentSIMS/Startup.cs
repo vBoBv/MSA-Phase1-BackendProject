@@ -42,9 +42,9 @@ namespace StudentSIMS
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "StudentSIMS", Version = "v1", Description = "MSA 2020 Phase 1 - BackEnd", Contact = new OpenApiContact(){ Email = "vannponhvath@gmail.com", Name="Ponhvath Vann" } });
-                var xmlCommentFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var cmlCommentsFullPath = Path.Combine(AppContext.BaseDirectory, xmlCommentFile);
-                c.IncludeXmlComments(cmlCommentsFullPath);
+                //var xmlCommentFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                //var cmlCommentsFullPath = Path.Combine(AppContext.BaseDirectory, xmlCommentFile);
+                //c.IncludeXmlComments(cmlCommentsFullPath);
             });
             services.AddControllers();
             services.AddCors();
@@ -60,13 +60,6 @@ namespace StudentSIMS
                 .AllowCredentials()
             );
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            app.UseHttpsRedirection();
-
             app.UseSwagger();
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
             // specifying the Swagger JSON endpoint.
@@ -76,6 +69,13 @@ namespace StudentSIMS
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My first API V1");
                 c.RoutePrefix = string.Empty; // launch swagger from root
             });
+
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 

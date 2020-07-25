@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/studentsimserver/databases/msa2020-backend",
+      "type": "mssql.azure",
+      "connectionId": "schoolSIMSConnection",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

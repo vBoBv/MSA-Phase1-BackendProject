@@ -1,0 +1,13 @@
+{
+  "dependencies": {},
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "SchoolSIMS"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "1169a369-f083-425e-8a9b-45b15bbfa7ae"
+    }
+  }
+}
