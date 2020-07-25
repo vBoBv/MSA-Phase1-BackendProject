@@ -41,7 +41,7 @@ namespace StudentSIMS
             services.AddAutoMapper(typeof(StudentSIMSMappings));
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "StudentSIMS", Version = "v1", Description = "MSA 2020 Phase 1 - BackEnd", Contact = new OpenApiContact(){ Email = "vannponhvath@gmail.com", Name="Ponhvath Vann", Url = new Uri("https://ponhvathvann.com") } });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "StudentSIMS", Version = "v1", Description = "MSA 2020 Phase 1 - BackEnd", Contact = new OpenApiContact(){ Email = "vannponhvath@gmail.com", Name="Ponhvath Vann" } });
                 var xmlCommentFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var cmlCommentsFullPath = Path.Combine(AppContext.BaseDirectory, xmlCommentFile);
                 c.IncludeXmlComments(cmlCommentsFullPath);

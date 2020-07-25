@@ -39,6 +39,13 @@
             <param name="addressId">The id of the address to be deleted</param>
             <returns></returns>
         </member>
+        <member name="M:StudentSIMS.Controllers.AddressesController.GetAddressesOfStudent(System.Int32)">
+            <summary>
+            Get all addresses of a student
+            </summary>
+            <param name="studentId">The id of the student</param>
+            <returns></returns>
+        </member>
         <member name="M:StudentSIMS.Controllers.StudentsController.GetStudents">
             <summary>
             Get list of students
@@ -52,14 +59,14 @@
             <param name="studentId">The id of the student</param>
             <returns></returns>
         </member>
-        <member name="M:StudentSIMS.Controllers.StudentsController.CreateStudent(StudentSIMS.Models.Dtos.StudentDto)">
+        <member name="M:StudentSIMS.Controllers.StudentsController.CreateStudent(StudentSIMS.Models.Dtos.StudentCreateDto)">
             <summary>
             Add a new student
             </summary>
             <param name="studentDto">The properties of a student</param>
             <returns></returns>
         </member>
-        <member name="M:StudentSIMS.Controllers.StudentsController.UpdateStudent(System.Int32,StudentSIMS.Models.Dtos.StudentDto)">
+        <member name="M:StudentSIMS.Controllers.StudentsController.UpdateStudent(System.Int32,StudentSIMS.Models.Dtos.StudentUpdateDto)">
             <summary>
             Update a student
             </summary>

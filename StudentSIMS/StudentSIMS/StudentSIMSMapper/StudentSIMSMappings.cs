@@ -13,6 +13,8 @@ namespace StudentSIMS.StudentSIMSMapper
         public StudentSIMSMappings()
         {
             CreateMap<Student, StudentDto>().ReverseMap();
+            CreateMap<Student, StudentCreateDto>().ReverseMap();
+            CreateMap<Student, StudentUpdateDto>().ReverseMap();
             CreateMap<Address, AddressDto>().ReverseMap();
             CreateMap<Address, AddressCreateDto>().ReverseMap();
             CreateMap<Address, AddressUpdateDto>().ReverseMap();

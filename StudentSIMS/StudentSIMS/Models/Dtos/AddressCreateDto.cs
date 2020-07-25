@@ -18,7 +18,7 @@ namespace StudentSIMS.Models.Dtos
         public string suburb { get; set; }
         [Required]
         public string city { get; set; }
-        public string postCode { get; set; }
+        public int postCode { get; set; }
         [Required]
         public string country { get; set; }
     }

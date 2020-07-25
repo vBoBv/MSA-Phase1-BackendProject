@@ -41,7 +41,7 @@ namespace StudentSIMS.Controllers
                 objDto.Add(_mapper.Map<AddressDto>(obj));
             }
 
-            return Ok(objList);
+            return Ok(objDto);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace StudentSIMS.Controllers
         /// <param name="addressDto">The properties of an address</param>
         /// <returns></returns>
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(List<AddressDto>))]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(AddressDto))]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -94,7 +94,7 @@ namespace StudentSIMS.Controllers
                 return StatusCode(500, ModelState);
             }
             //return Ok();
-            return CreatedAtAction("GetAddress", new { addressId = addressObj.addressId }, addressObj);
+            return CreatedAtAction("GetAddress", new { addressId = addressObj.addressId }, addressDto);
         }
 
         /// <summary>
@@ -152,8 +152,13 @@ namespace StudentSIMS.Controllers
             return NoContent();
         }
 
-        [HttpGet("[action]/{addressId:int}")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(AddressDto))]
+        /// <summary>
+        /// Get all addresses of a student
+        /// </summary>
+        /// <param name="studentId">The id of the student</param>
+        /// <returns></returns>
+        [HttpGet("[action]/{studentId:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<AddressDto>))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
         public IActionResult GetAddressesOfStudent(int studentId)

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentSIMS.Data;
 
 namespace StudentSIMS.Migrations
 {
     [DbContext(typeof(StudentContext))]
-    partial class StudentContextModelSnapshot : ModelSnapshot
+    [Migration("20200724103021_ModifiedPostCodeDataType")]
+    partial class ModifiedPostCodeDataType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -83,8 +85,8 @@ namespace StudentSIMS.Migrations
                     b.Property<string>("middleName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("phoneNumber")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("phoneNumber")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("timeCreated")
                         .HasColumnType("datetime2");

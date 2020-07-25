@@ -41,7 +41,7 @@ namespace StudentSIMS.Controllers
                 objDto.Add(_mapper.Map<StudentDto>(obj));
             }
 
-            return Ok(objList);
+            return Ok(objDto);
         }
 
         /// <summary>
@@ -78,11 +78,11 @@ namespace StudentSIMS.Controllers
         /// <param name="studentDto">The properties of a student</param>
         /// <returns></returns>
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(List<StudentDto>))]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(StudentDto))]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult CreateStudent([FromBody] StudentDto studentDto)
+        public IActionResult CreateStudent([FromBody] StudentCreateDto studentDto)
         {
             if (studentDto == null)
             {
@@ -114,7 +114,7 @@ namespace StudentSIMS.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult UpdateStudent(int studentId, [FromBody] StudentDto studentDto)
+        public IActionResult UpdateStudent(int studentId, [FromBody] StudentUpdateDto studentDto)
         {
             if (studentDto == null || studentId != studentDto.studentId)
             {

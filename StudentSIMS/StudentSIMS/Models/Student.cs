@@ -18,7 +18,7 @@ namespace StudentSIMS.Models
         [Required]
         public string lastName { get; set; }
         public string emailAddress { get; set; }
-        public int phoneNumber { get; set; }
+        public string phoneNumber { get; set; }
         public DateTime timeCreated { get; set; }
     }
 }
