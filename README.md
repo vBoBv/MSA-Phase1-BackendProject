@@ -2,16 +2,16 @@
 App url: https://aspdotnet-ponhvath.azurewebsites.net
 
 ## Query Editor Screenshots
-![Address Table](backendImgs/1.png)
-![Student Table](backendImgs/2.png)
+![Address Table](backendImgs/1.PNG)
+![Student Table](backendImgs/2.PNG)
 
 ## Swagger UI Screenshot
-![Swagger UI](backendImgs/3.png)
+![Swagger UI](backendImgs/3.PNG)
 
 ## Microsoft Learn Modules
-![Module 1](backendImgs/4.png)
-![Module 2](backendImgs/5.png)
-![Module 3](backendImgs/6.png)
+![Module 1](backendImgs/4.PNG)
+![Module 2](backendImgs/5.PNG)
+![Module 3](backendImgs/6.PNG)
 
 ## Project Structure
 ### 1) Models
