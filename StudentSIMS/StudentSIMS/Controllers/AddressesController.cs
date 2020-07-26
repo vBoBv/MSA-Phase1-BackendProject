@@ -82,18 +82,13 @@ namespace StudentSIMS.Controllers
                 return BadRequest(ModelState);
             }
 
-            //if(!ModelState.IsValid)
-            //{
-            //    return BadRequest(ModelState);
-            //}
-
             var addressObj = _mapper.Map<Address>(addressDto);
             if (!_addressRepo.CreateAddress(addressObj))
             {
                 ModelState.AddModelError("", $"Something went wrong when saving the record {addressObj.addressId}");
                 return StatusCode(500, ModelState);
             }
-            //return Ok();
+            
             return CreatedAtAction("GetAddress", new { addressId = addressObj.addressId }, addressDto);
         }
 
